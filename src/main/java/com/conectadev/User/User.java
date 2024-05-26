@@ -42,24 +42,10 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING) 
     Role role;
 
-    public User(String username, String encode, String firstname, String lastname, String country, Role role) {
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
       return List.of(new SimpleGrantedAuthority((role.name())));
     }
-
-    @Override
-    public String getPassword() {
-        return "";
-    }
-
-    @Override
-    public String getUsername() {
-        return "";
-    }
-
     @Override
     public boolean isAccountNonExpired() {
        return true;

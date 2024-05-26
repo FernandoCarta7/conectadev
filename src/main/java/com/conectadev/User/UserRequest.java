@@ -1,4 +1,4 @@
-package com.conectadev.Auth;
+package com.conectadev.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,9 +7,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class LoginRequest {
+@AllArgsConstructor
+public class UserRequest {
+    int id;
     String username;
-    String password; 
+    String firstname;
+    String lastname;
+    String country;
 }
