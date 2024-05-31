@@ -1,15 +1,16 @@
 package com.conectadev.Auth;
 
+import com.conectadev.Jwt.JwtService;
+import com.conectadev.User.Role;
+import com.conectadev.User.User;
+import com.conectadev.User.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.irojas.demojwt.Jwt.JwtService;
-import com.irojas.demojwt.User.Role;
-import com.irojas.demojwt.User.User;
-import com.irojas.demojwt.User.UserRepository;
+
 
 import lombok.RequiredArgsConstructor;
 
@@ -38,7 +39,6 @@ public class AuthService {
             .password(passwordEncoder.encode( request.getPassword()))
             .firstname(request.getFirstname())
             .lastname(request.lastname)
-            .country(request.getCountry())
             .role(Role.USER)
             .build();
 

@@ -14,5 +14,4 @@ public class UserDTO {
     String username;
     String firstname;
     String lastname;
-    String country;
 }
